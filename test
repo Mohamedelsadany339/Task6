@@ -1,0 +1,67 @@
+#    >>>D1 = {1:'a', 2:'b', 3:'c'}
+#    >>>D2 = {2:'x', 1:'y', 4:'z'}
+#    >>> intersect(D1, D2)
+#           [1,2]
+#Q1
+# D1 = {1:'a', 2:'b', 3:'c'}
+# D2 = {2:'x', 1:'y', 4:'z'}
+# l1=[]
+# for key1 in D1.keys():
+#     for Key2 in D2.keys():
+#         if key1==Key2:
+#             l1.append(key1)
+# print(l1)
+#Q2
+# countLetter('Welcome Python')
+# {'w': 1, 'e': 2, 'l': 1, 'c': 1, 'o': 2, 'm': 1, 'p': 1, 'y': 1, 't': 1, 'h': 1, 'n': 1}
+# s=input("Please input a word: ")
+# s=s.replace(" ","")
+# def countLetter(s):
+#     dict = {}
+#     for i in s:
+#         if i in dict:
+#             dict[i] += 1
+#         else:
+#             dict[i] = 1
+#     print(dict)
+#     return
+# countLetter(s)
+#Q3
+#>>> set1 = {1,2,3,4,5}
+# >>> set2 = {4,5,6,7,8}
+# >>> difference
+# >>> {1, 2, 3}
+# {8, 6, 7}
+def operations():
+    set1 = {1,2,3,4,5}
+    set2 = {4,5,6,7,8}
+    set3=set({})
+    set4=set({})
+    c=0
+    z=0
+    op=input("please input op: ")
+    if op=="difference":
+        for i in set1:
+            if i not in set2:
+                set3.add(i)
+        for y in set2:
+            if y not in set1:
+                set4.add(y)
+        print(set3)
+        print(set4)
+    elif op=="search":
+        n=int(input("please input a number: "))
+        for j in set1:
+            if j==n:
+                c+=1
+        for g in set2:
+            if g==n:
+                z+=1
+        print(c+z)
+    elif op=="length":
+        print(len(set1)+len(set2))
+    else:
+        print("Your operations is search ,difference,length")
+operations()
+
+
